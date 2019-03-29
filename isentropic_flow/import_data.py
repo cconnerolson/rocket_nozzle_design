@@ -14,8 +14,7 @@ def M2P(Ma_in):  # 1 output
 		if df.Ma[ii] > Ma_in:
 			Ma1, Ma2 = df.Ma[(ii - 1)], df.Ma[(ii)]
 			d_Ma = Ma2 - Ma1
-			P = df.Ma[(ii - 1)] +
-		# else:
+			P = df.Ma[(ii - 1)]
 			# raise ValueError('invalid input')
 		
 
