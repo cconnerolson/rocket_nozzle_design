@@ -5,8 +5,8 @@ df = pd.read_csv("isentropic_flow_table.csv")
 
 # print(df)
 
-df.plot(kind='scatter', x='A/A*', y='P/P_0')
-plt.show()
+# df.plot(kind='scatter', x='A/A*', y='P/P_0')
+# plt.show()
 
 
 def M2P(Ma_in):  # 1 output
