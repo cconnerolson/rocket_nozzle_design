@@ -8,3 +8,4 @@
 
 # Python egg metadata, regenerated from source files by setuptools.
 /*.egg-info
+/data/isentropic_flow_table.xlsx
