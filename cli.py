@@ -1,6 +1,6 @@
 import click
 from isentropic_flow import *
-from specific_heat import specific_heat
+from schomate_equation import specific_heat
 
 print('\nUsage:')
 

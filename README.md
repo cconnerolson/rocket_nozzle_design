@@ -2,9 +2,14 @@
 
 rocket_nozzle_design is a Python library for designing liquid rocket engine nozzles.
 
+## Status
+
+this project is a work in progress, some parts of it may not work as intended, others may not work at all.
+
+
 ## Installation
 
-no installation distribution service currently configured
+no installation distribution service currently configured.
 
 ## Usage
 
