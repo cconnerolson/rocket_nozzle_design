@@ -118,4 +118,3 @@ def a2t(A):  # 2 outputs todo A2T, description
 	:param A: A/A* area ratio
 	"""
 	pass
-
