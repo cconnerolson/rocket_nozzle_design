@@ -7,6 +7,6 @@ setup(name='rocket_nozzle_design',
       author='Conner Olson',
       author_email='cconnerolson@gmail.com',
       license='MIT',
-      packages=['pandas', 'matplotlib', 'numpy'],
+      packages=['pandas', 'matplotlib', 'numpy', 'docopt'],
       zip_safe=False
       )

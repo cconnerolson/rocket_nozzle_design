@@ -1,4 +1,4 @@
-# Tools for Liquid Rocket Engine Design
+# Tools for Rocket Engine Nozzle Design
 
 rocket_nozzle_design is a Python library for designing liquid rocket engine nozzles.
 

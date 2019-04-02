@@ -11,110 +11,122 @@ A_data = data.A.tolist()
 
 # print(A_data)
 
-def m2p(M):  # 1 output todo description
+def m2p(M):  # 1 output
 	"""
-	*** description ***
-	:param Ma: Mach number
+	Returns pressure ratio corresponding to input Mach number using linear interpolation.
+	:param M: Mach number
 	"""
 	if M < 0 or M >= 6:
-		raise ValueError('Mach number input outside valid domain')
+		raise ValueError('Mach number outside valid input domain')
 	return np.interp(M, M_data, P_data)
 
 
-def m2t(M):  # 1 output todo description
+def m2t(M):  # 1 output
 	"""
-	*** description ***
-	:param Ma: Mach number
+	Returns temperature ratio corresponding to input Mach number using linear interpolation.
+	:param M: Mach number
 	"""
 	if M < 0 or M >= 6:
-		raise ValueError('Mach number input outside valid domain')
+		raise ValueError('Mach number outside valid input domain')
 	return np.interp(M, M_data, T_data)
 
 
-def m2a(M):  # 1 output todo description
+def m2a(M):  # 1 output
 	"""
-	*** description ***
-	:param Ma: Mach number
+	Returns area ratio corresponding to input Mach number using linear interpolation.
+	:param M: Mach number
 	"""
 	if M < 0 or M >= 6:
-		raise ValueError('Mach number input outside valid domain')
+		raise ValueError('Mach number outside valid input domain')
 	return np.interp(M, M_data, A_data)
 
 
-print(m2a(0.05))
-
-
-def p2m(P):  # 1 output # todo fix P2M, description
+def p2m(P):  # 1 output todo verify output, verify error range
 	"""
-	*** description ***
+	Returns Mach number corresponding to input pressure ratio using linear interpolation.
 	:param P: P/P_0 pressure ratio
 	"""
-	if P < 9.746e-4 or P > 1:
-		raise ValueError('Pressure ratio input outside valid domain')
+	if P < 9.746e-4 or P > 1:  # todo change error range
+		raise ValueError('Pressure ratio outside valid input domain')
 	return np.interp(P, P_data, M_data)
 
 
-def p2t(P):  # 1 output todo P2T, description
+def p2t(P):  # 1 output todo verify output, change error range
 	"""
-	*** description ***
+	Returns temperature ratio corresponding to input pressure ratio using linear interpolation.
 	:param P: P/P_0 pressure ratio
 	"""
 	if P < 0 or P >= 6:
-		raise ValueError('Pressure ratio input outside valid domain')
-	pass
+		raise ValueError('Pressure ratio outside valid input domain')
+	return np.interp(P, P_data, T_data)
 
 
-def p2a(P):  # 1 output todo P2A, description
+def p2a(P):  # 1 output todo verify output, change error range
 	"""
-	*** description ***
+	Returns area ratio corresponding to input pressure ratio using linear interpolation.
 	:param P: P/P_0 pressure ratio
 	"""
 	pass
+	if P < 0 or P >= 6:
+		raise ValueError('Pressure ratio outside valid input domain')
+	return np.interp(P, P_data, A_data)
 
 
-def t2m(T):  # 1 output todo T2M, description
+def t2m(T):  # 1 output todo verify output, change error range
 	"""
-	*** description ***
+	Returns Mach number corresponding to input temperature ratio using linear interpolation.
 	:param T: T/T_0 temperature ratio
 	"""
-	pass
+	if T < 0 or T >= 6:
+		raise ValueError('Temperature ratio outside valid input domain')
+	return np.interp(T, T_data, M_data)
 
 
-def t2p(T):  # 1 output todo T2P, description
+def t2p(T):  # 1 output todo verify output, change error range
 	"""
-	*** description ***
+	Returns pressure ratio corresponding to input temperature ratio using linear interpolation.
 	:param T: T/T_0 temperature ratio
 	"""
-	pass
+	if T < 0 or T >= 6:
+		raise ValueError('Temperature ratio outside valid input domain')
+	return np.interp(T, T_data, P_data)
 
 
-def t2t(T):  # 1 output todo T2A, description
+def t2a(T):  # 1 output todo verify output, change error range
 	"""
-	*** description ***
+	Returns area ratio corresponding to input temperature ratio using linear interpolation.
 	:param T: T/T_0 temperature ratio
 	"""
-	pass
+	if T < 0 or T >= 6:
+		raise ValueError('Temperature ratio outside valid input domain')
+	return np.interp(T, T_data, A_data)
 
 
-def a2m(A):  # 2 outputs todo A2M, description
+def a2m(A):  # 2 outputs todo define function, change error range
 	"""
-	*** description ***
+	Returns Mach number corresponding to input area ratio using linear interpolation.
 	:param A: A/A* area ratio
 	"""
 	pass
+	if A < 0 or A >= 6:
+		raise ValueError('Area ratio outside valid input domain')
 
 
-def a2p(A):  # 2 output todo A2P, description
+def a2p(A):  # 2 output todo define function, change error range
 	"""
-	*** description ***
+	Returns pressure ratio corresponding to input area ratio using linear interpolation.
 	:param A: A/A* area ratio
 	"""
 	pass
+	if A < 0 or A >= 6:
+		raise ValueError('Area ratio outside valid input domain')
 
 
-def a2t(A):  # 2 outputs todo A2T, description
+def a2t(A):  # 2 outputs todo define function, change error range
 	"""
-	*** description ***
+	Returns temperature ratio corresponding to input area ratio using linear interpolation.
 	:param A: A/A* area ratio
 	"""
 	pass
+	if A < 0 or A >= 6:
+		raise ValueError('Area ratio outside valid input domain')

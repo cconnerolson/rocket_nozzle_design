@@ -7,16 +7,13 @@ def specific_heat(T):
 	if 500 <= T < 1700:
 		a, b, c, d, e = [30.092, 6.832514, 6.793425, -2.53448, 0.082139]
 	elif T == 1700:
-		print(48.915)
-		return
-		
+		return 2.7175
 	elif 1700 < T <= 6000:
 		a, b, c, d, e = [41.96426, 8.622053, -1.49978, 0.098119, -11.1576]
 	else:
 		raise ValueError('Input temperature outside valid domain')
-	c_p = a + (b * t) + (c * t**2) + (d * t**3) + (e / t**2)
-	print(c_p)
+	return (a + (b * t) + (c * t**2) + (d * t**3) + (e / t**2)) / 18
 
 
 temp = float(input("input temperature (K)... "))
-specific_heat(temp)
+print(specific_heat(temp))
