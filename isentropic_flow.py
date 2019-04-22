@@ -1,8 +1,7 @@
 import numpy as np
-import pandas
+import pandas as pd
 
-data = pandas.read_csv('data/isentropic_flow_table.csv')
-
+data = pd.read_csv('data/isentropic_flow_table.csv')
 M_data = data.Ma.tolist()
 P_data = data.p.tolist()
 T_data = data.t.tolist()
